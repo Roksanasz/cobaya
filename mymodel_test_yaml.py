@@ -1,0 +1,22 @@
+theory:
+  my_model:  # Your custom theory class name
+    H0: 70
+    Omega_m: 0.3
+
+likelihood:
+  my_likelihood:  # Your custom likelihood class name
+
+params:
+  H0:
+    prior: [50, 90] # type: ignore
+    proposal: 5
+  Omega_m:
+    prior: [0.1, 0.5] # type: ignore
+    proposal: 0.05
+  sigma:
+    prior: [0.01, 1] # type: ignore
+    proposal: 0.1
+
+sampler:
+  mcmc:
+    max_samples: 1000
